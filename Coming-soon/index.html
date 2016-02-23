@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <title>Coming soon</title>
+
+    
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/css01.css">
+
+    <script type="text/javascript">
+
+    function func()
+    {
+      var y=document.getElementById("id1").value;
+      
+      if(y=="" || y==null)
+      { 
+          var err="Please Enter valid e-mail address";
+         document.getElementById("demo").innerHTML = err;
+      }
+    }
+
+
+
+    function Validation() 
+    { 
+
+      var Validation_message="Something looks wrong :(";
+      var inpObj = document.getElementById("id1");
+      
+      if (inpObj.checkValidity() == false) 
+    {
+      document.getElementById("demo").innerHTML = Validation_message;
+      document.getElementById("demo").style.color="#ff0000";
+      document.getElementById("id1").style.borderColor="#ff0000";
+    
+    } 
+    
+    else 
+    {
+        document.getElementById("demo").innerHTML = "Thanks! We'll keep you posted.";
+        document.getElementById("demo").style.color="#000000";
+        document.getElementById("demo").style.opacity = "0.54";
+        document.getElementById("id1").style.borderColor="#d1d1d1";
+    
+    } 
+}
+    </script>
+    </head>
+
+  <body>
+
+  <section class="sec1">
+    <div class="container">
+      <div class="row">
+        <div class=" col-xs-offset-2 col-xs-8 col-xs-offset-2 ">
+          <div class="logo">
+            <img src="img/gamezop-logo.png">
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+
+      <div class="container"> 
+        <div id="header">
+            <h3>Coming soon to <br>  <span>iOS</span></h3> 
+        </div>
+      </div>
+  </section> 
+
+
+
+      <section class="sec2">
+      <div class="Notify">
+            <h3>Notify me</h3>
+          <div class="form-style-8">
+            <form>
+              <input type="email" name="myForm"  placeholder="Email address" maxlength="36" id="id1"/>
+            </form>
+          </div>  
+          <div>
+            <p id="demo"></p>
+          </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12  ">
+            <button type="button" class="btn btn-primary" alt="Submit" value="submit" onclick="Validation();func();" id="button1" onclick="setColor(button1)">Send Email</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        
+        
+        <div class="push"></div>
+      </div>
+      </section>
+
+
+        <section class="sec3">
+              <div class="footer">
+                <h3>
+                  <a href=""></a>Google Play</h3>
+               <nav>
+                 <a href=""><li>Facebook</li></a>
+                 <li>|</li>
+                 <a href=""><li>Twitter</li></a>
+               </nav>
+              </div>
+        </section>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
